@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=3.0" />
+
+    <title>Dross | Sujal Goel</title>
+
+    <meta name="description" content="A simple NodeJS url shortener built using ExpressJS and TypeScript." />
+
+    <meta name="theme-color" content="#5865F2" />
+    <meta property="og:title" content="Dross | Sujal Goel" />
+    <meta property="og:url" content="https://dross.sujalgoel.me/" />
+    <meta property="og:image" content="https://dross.sujalgoel.me/logo.png" />
+    <meta property="og:description" content="A simple NodeJS url shortener built using ExpressJS and TypeScript." />
+
+    <meta property="twitter:title" content="Dross | Sujal Goel" />
+    <meta property="twitter:url" content="https://dross.sujalgoel.me/" />
+    <meta property="twitter:image" content="https://dross.sujalgoel.me/logo.png" />
+    <meta property="twitter:description" content="A simple NodeJS url shortener built using ExpressJS and TypeScript." />
+
+    <link rel="icon" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/custom-recaptcha/dist/custom_captcha.min.css" />
+</head>
+
+<body>
+    <main>
+        <div class="flex">
+            <div class="form-and-title">
+                <div class="heading">
+                    <h1>Dross</h1>
+                </div>
+            </div>
+            <form id="shorten">
+                <div class="long">
+                    <input required type="url" placeholder="YOUR LOOONNNGGG URL" name="long" id="long"
+                        autocomplete="off" />
+                </div>
+                <captcha required></captcha>
+                <div class="button">
+                    <button type="submit">SHORTEN</button>
+                </div>
+            </form>
+            <footer>
+                <p>
+                    Made with<i class="fa-regular fa-heart fa-beat-fade"></i>by
+                    <span id="footer">Sujal Goel</span>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/custom-recaptcha/dist/custom_captcha.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 {
-	"name": "dross-url-shortener",
+	"name": "dross",
 	"description": "A simple NodeJS url shortener built using ExpressJS and TypeScript.",
 	"version": "1.0.0",
 	"main": "./src/index.ts",
@@ -8,14 +8,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sujalgoel/dross-url-shortener.git"
+		"url": "git+https://github.com/sujalgoel/dross.git"
 	},
 	"author": "Sujal Goel",
 	"license": "GPL-3.0",
 	"bugs": {
-		"url": "https://github.com/sujalgoel/dross-url-shortener/issues"
+		"url": "https://github.com/sujalgoel/dross/issues"
 	},
-	"homepage": "https://github.com/sujalgoel/dross-url-shortener#readme",
+	"homepage": "https://github.com/sujalgoel/dross#readme",
 	"dependencies": {
 		"axios": "^1.4.0",
 		"dotenv": "^16.3.1",

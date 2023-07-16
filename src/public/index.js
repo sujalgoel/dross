@@ -13,8 +13,12 @@ document.getElementById('footer').addEventListener('click', () => {
 document.getElementById('shorten').addEventListener('submit', (e) => {
 	e.preventDefault();
 
+	// disable button to prevent multiple clicks
+
 	const token = CustomCaptcha._last_response;
 	const long = document.getElementById('long').value;
+
+	document.getElementById('shorten').disabled = true;
 
 	fetch('/shorten', {
 		method: 'POST',
@@ -25,10 +29,11 @@ document.getElementById('shorten').addEventListener('submit', (e) => {
 		body: JSON.stringify({ long, token }),
 	}).then(async (response) => {
 
+		const data = await response.json();
+
 		CustomCaptcha.reset();
 		document.getElementById('long').value = '';
-
-		const data = await response.json();
+		document.getElementById('shorten').disabled = false;
 
 		if (data.success) {
 			Swal.fire({
@@ -41,7 +46,8 @@ document.getElementById('shorten').addEventListener('submit', (e) => {
 				confirmButtonText: '<span style="color: #000;"><b><i class="fa-regular fa-clipboard"></i> Copy to clipboard!</b></span>',
 			}).then((result) => {
 				if (result.value) {
-					navigator.clipboard.writeText(`${location.hostname}/${data.shortURL}`);
+
+					navigator.clipboard.writeText(`https://${location.hostname}/${data.shortURL}`);
 				}
 			});
 		} else {

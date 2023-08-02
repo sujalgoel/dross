@@ -6,12 +6,9 @@
 	"scripts": {
 		"start": "ts-node ./src/index.ts"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/sujalgoel/dross.git"
-	},
+	"repository": "git+https://github.com/sujalgoel/dross.git",
 	"author": "Sujal Goel",
-	"license": "GPL-3.0",
+	"license": "CC BY-NC-ND 4.0",
 	"bugs": {
 		"url": "https://github.com/sujalgoel/dross/issues"
 	},
@@ -19,11 +16,9 @@
 	"dependencies": {
 		"axios": "^1.4.0",
 		"dotenv": "^16.3.1",
-		"ejs": "^3.1.9",
 		"express": "^4.18.2",
 		"express-session": "^1.17.3",
-		"mongoose": "^7.3.4",
-		"serve-favicon": "^2.5.0"
+		"mongoose": "^7.3.4"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.13",

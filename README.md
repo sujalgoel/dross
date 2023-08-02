@@ -27,7 +27,7 @@ git clone https://github.com/sujalgoel/dross.git
 2. **Install dependencies:**
 
 ```bash
-npm install
+yarn
 ```
 
 3. **Configure environment variables:**
@@ -39,7 +39,7 @@ cp .env.example .env
 4. **Start the server:**
 
 ```bash
-npm run start
+yarn run start
 ```
 
 ## Contributing
